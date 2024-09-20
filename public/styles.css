@@ -1,0 +1,142 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f7f9; 
+    color: #374151; 
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #111827; 
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Task Form */
+#task-form {
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    gap: 10px;
+}
+
+#task-form input {
+    flex: 1;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid #e5e7eb; 
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#task-form input:focus {
+    border-color: #059669; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(5, 150, 105, 0.5); 
+}
+
+#task-form button {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: #059669; 
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#task-form button:hover {
+    background-color: #047857; 
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(5, 150, 105, 0.3); 
+}
+
+/* Task List */
+ul {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #9ca3af; 
+}
+
+/* Buttons for Edit */
+.edit {
+    background-color:#007bff; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit:hover {
+    background-color: #0056a1; 
+}
+
+.delete {
+    background-color: #ef4444; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete:hover {
+    background-color: #dc2626; 
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    #task-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    ul {
+        padding: 0 20px;
+    }
+
+    li {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .edit, .delete {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
